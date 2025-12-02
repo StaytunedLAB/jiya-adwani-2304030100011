@@ -1,1 +1,2 @@
-print("Hello Technolojiya !")
+if __name__ == "__main__":
+    print("Hello Technology!")

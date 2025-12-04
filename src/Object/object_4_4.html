@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <p>
-        Hello My Name is Jiya.
-    </p>
     <script>
-        console.log("Hello from console!");
-        alert("Hello from alert!");
+        let user = {
+            name: "Sara",
+            greet() {
+                console.log("Hello, " + this.name);
+            }
+        };
+
+        user.greet();  // "Hello, Sara"
+
     </script>
-    
 </body>
+
 </html>

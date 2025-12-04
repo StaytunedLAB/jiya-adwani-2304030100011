@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numbers = [10, 20, 30];
+
+// push() – add at end
+numbers.push(40);       // [10, 20, 30, 40]
+
+// pop() – remove last
+numbers.pop();          // [10, 20, 30]
+
+// unshift() – add at start
+numbers.unshift(5);     // [5, 10, 20, 30]
+
+// shift() – remove first
+numbers.shift();        // [10, 20, 30]
+
+// map() – create new array
+let double = numbers.map(n => n * 2);
+console.log(double);    // [20, 40, 60]
+
+// filter() – select values
+let above20 = numbers.filter(n => n > 20);
+console.log(above20);   // [30]
+
+// reduce() – sum of elements
+let total = numbers.reduce((a, b) => a + b, 0);
+console.log(total);     // 60
+
+// forEach() – print each element
+numbers.forEach(n => console.log(n));
+
+    </script>
+</body>
+</html>

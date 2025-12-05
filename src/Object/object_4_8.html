@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let person = {
+            name: "Tom",
+            age: 40,
+
+            [Symbol.toPrimitive](hint) {
+                if (hint === "string") return `Person: ${this.name}`;
+                return this.age;     // for number or default
+            }
+        };
+
+        console.log(String(person));   // "Person: Tom"
+        console.log(+person);          // 40
+        console.log(person + 10);      // 50
+
+    </script>
+</body>
+
+</html>

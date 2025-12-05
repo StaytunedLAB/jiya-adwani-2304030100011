@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // -------------------------
+// MAP EXAMPLE
+// -------------------------
+console.log("=== MAP EXAMPLE ===");
+
+let map = new Map();
+map.set("name", "Jiya");
+map.set("age", 22);
+map.set("city", "Delhi");
+
+console.log("Map size:", map.size);
+console.log("Name:", map.get("name"));
+
+console.log("Iterating Map:");
+for (let [key, value] of map) {
+  console.log(key, ":", value);
+}
+
+
+
+// -------------------------
+// SET EXAMPLE
+// -------------------------
+console.log("\n=== SET EXAMPLE ===");
+
+let set = new Set([1, 2, 2, 3, 4]);
+set.add(5);
+
+console.log("Set values:");
+for (let val of set) {
+  console.log(val);
+}
+
+
+
+// -------------------------
+// WEAKMAP EXAMPLE
+// -------------------------
+console.log("\n=== WEAKMAP EXAMPLE ===");
+
+let weakMap = new WeakMap();
+let obj1 = { id: 1 };
+let obj2 = { id: 2 };
+
+weakMap.set(obj1, "User 1 secret");
+weakMap.set(obj2, "User 2 secret");
+
+console.log("WeakMap get obj1:", weakMap.get(obj1));
+// WeakMap is not iterable
+
+
+
+// -------------------------
+// WEAKSET EXAMPLE
+// -------------------------
+console.log("\n=== WEAKSET EXAMPLE ===");
+
+let weakSet = new WeakSet();
+let user1 = { name: "A" };
+let user2 = { name: "B" };
+
+weakSet.add(user1);
+weakSet.add(user2);
+
+console.log("user1 in WeakSet?", weakSet.has(user1)); // true
+
+// WeakSet is not iterable
+
+console.log("\n=== END ===");
+    </script>
+</body>
+</html>
